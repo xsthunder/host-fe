@@ -21,7 +21,16 @@ function logIp(){
 var app = express()
 var root = './dist'
 
-const port = 8080
+let port = process.argv[2]
+port = port?port:'8080'
+
+if(port.match(/\d+/).length>0){
+    port = port.match(/\d+/)[0]
+    port = parseInt(port)
+}
+else {
+    port = 8080
+}
 
 // webdev proxy like see https://webpack.js.org/configuration/dev-server/#devserverproxy
 // or https://webpack.js.org/configuration/dev-server/#devserverproxy
