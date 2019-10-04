@@ -8,5 +8,5 @@ host modern SPA with http fallback and fullly webpack-like proxy support.
 npm i
 # set up dist/
 # set up proxy.conf.json
-npm test
+npm test <port>
 ```
