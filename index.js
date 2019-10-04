@@ -48,7 +48,7 @@ Object.entries(config).map(([url, urlconfig])=>{
 app.use(express.static(root))
 app.use(fallback('index.html', { root: root  }))
 
-app.listen(8080)
+app.listen(port)
 console.log(`app listen on ${port} hosting ${root}`)
 console.log(`webproxy config ${configFileContent}`)
 console.log(`avaliable adress`)
